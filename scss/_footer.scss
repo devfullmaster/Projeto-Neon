@@ -1,0 +1,248 @@
+footer {
+  position: relative;
+  background-color: $brand-blue;
+  padding-top: 4.9rem;
+  padding-bottom: 4.9rem;
+  &:after {
+    content: "";
+    width: 100%;
+    max-width: 121.6rem;
+    height: 4px;
+    background: $brand-yellow;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -60.8rem;
+  }
+  .top-footer {
+    @include flex(row, center, space-between);
+    border-bottom: 2px solid rgba(73, 196, 253, 0.2);
+    padding-bottom: 4.8rem;
+    margin-bottom: 5.7rem;
+    .logo {
+      max-width: 13.1rem;
+    }
+    .socials {
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        color: #FFFFFF;
+        opacity: 0.7;
+        font-family: 'Poppins', sans-serif;
+        margin-right: 3rem;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          &:not(:first-child) {
+            margin-left: 3rem;
+          }
+          a {
+            img {
+              transition: opacity .3s;
+            }
+            &:hover {
+              img {
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .main-area {
+    @include flex(row, flex-start, space-between);
+    border-bottom: 2px solid rgba(73, 196, 253, 0.2);
+    padding-bottom: 6rem;
+    margin-bottom: 3.9rem;
+    nav {
+      @include flex(row, flex-start, space-between);
+      width: 100%;
+      max-width: 85.5rem;
+      .item {
+        strong {
+          display: block;
+          font-weight: 600;
+          font-size: 1.6rem;
+          line-height: 2.3rem;
+          color: #FFFFFF;
+          font-family: 'Poppins', sans-serif;
+          margin-bottom: 2.2rem;
+        }
+        ul {
+          li {
+            &:not(:last-child) {
+              margin-bottom: 2.7rem;
+            }
+            a {
+              font-family: 'Poppins', sans-serif;
+              font-size: 1.4rem;
+              line-height: 1.9rem;
+              color: #FFFFFF;
+              opacity: 0.67;
+              transition: opacity .3s;
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    .contact {
+      width: 100%;
+      max-width: 28rem;
+      a {
+        width: 100%;
+        height: 7.6rem;
+        display: flex;
+        align-items: center;
+        background-color: rgba(0,164,240,0.23);
+        border-radius: 6px;
+        padding-left: 25px;
+        transition: background-color .3s;
+        &:hover {
+          background-color: $brand-blue-light;
+        }
+        &:not(:last-child) {
+          margin-bottom: 2.4rem;
+        }
+        .info {
+          margin-left: 2.4rem;
+          strong {
+            font-family: 'Poppins', sans-serif;
+            display: block;
+            font-weight: 600;
+            color: #fff;
+            font-size: 1.4rem;
+          }
+          p {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+  .msg {
+    display: flex;
+    align-items: flex-start;
+    max-width: 70.3rem;
+    font-size: 18px;
+    p {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      color: #FFFFFF;
+      opacity: 0.8;
+      max-width: 66rem;
+      margin-left: 2.5rem;
+    }
+  }
+  @include responsive(1050px) {
+    .main-area {
+      nav {
+        max-width: 71%;
+        .item {
+          strong {
+            font-size: 1.4rem;
+          }
+          ul {
+            li {
+              a {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(991px) {
+    .main-area {
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      nav {
+        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .item {
+          width: 33.3%;
+          margin-bottom: 3rem;
+        }
+      }
+      .contact {
+        position: absolute;
+        right: 0;
+        bottom: 113px;
+      }
+    }
+    &:after {
+      max-width: 100%;
+      left: 0;
+      margin-left: 0;
+    }
+  }
+  @include responsive(560px) {
+    padding: 4.6rem 0 6rem 0;
+    .top-footer {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 4rem;
+      margin-bottom: 4rem;
+      .logo {
+        max-width: 10.8rem;
+        margin-bottom: 3.2rem;
+      }
+      .socials {
+        flex-direction: column;
+        align-items: center;
+        span {
+          margin-right: 0;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    .main-area {
+      padding-bottom: 4rem;
+      margin-bottom: 4rem;
+      nav {
+        .item {
+          width: 50%;
+          margin-bottom: 4rem;
+        }
+      }
+      .contact {
+        position: relative;
+        bottom: 0;
+        max-width: 100%;
+        a {
+          justify-content: center;
+          .icon {
+            display: none;
+          }
+          .info {
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+      }
+    }
+    .msg {
+      flex-direction: column;
+      align-items: center;
+      p {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

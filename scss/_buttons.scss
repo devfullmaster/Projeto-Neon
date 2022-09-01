@@ -1,0 +1,76 @@
+.btn-primary,
+.btn-secondary {
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  padding: 0 3rem;
+  line-height: 4.8rem;
+  border-radius: 122px;
+  font-size: 1.6rem;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  font-weight: 400;
+  background-color: $brand-yellow;
+  color: #855B35;
+  transition: background-color .3s;
+  &:hover {
+    background-color: #FFDC5C;
+  }
+}
+
+.btn-secondary {
+  border: 1px solid $brand-blue-light;
+  color: $brand-blue-light;
+  background-color: #fff;
+  font-weight: 500;
+  transition: all .3s;
+  &.white {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      color: $brand-blue-light;
+    }
+  }
+  &:hover {
+    background-color: $brand-blue-light;
+    color: #fff;
+  }
+}
+
+.btn-chat {
+  width: 9.7rem;
+  height: 3.8rem;
+  position: fixed;
+  bottom: 9px;
+  right: 18.3%;
+  background: #00D7D7;
+  border-radius: 120px;
+  z-index: 99;
+  @include flex(row, center, center);
+  transition: transform .3s;
+  &:hover {
+    transform: scale(1.02) translateY(-5px);
+  }
+  span {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 0.7rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+  }
+  @include responsive(1600px) {
+    right: 12%;
+  }
+  @include responsive(1440px) {
+    right: 8%;
+  }
+  @include responsive(1366px) {
+    right: 5.6%;
+  }
+  @include responsive(1050px) {
+    right: 2.3%;
+  }
+}
